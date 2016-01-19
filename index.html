@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="jumboTron">
+			<h1>El's List</h1>
+		</div>
+		<form id='newPost'>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="input-group">
+                <span class="input-group-addon">Title</span>
+                <input id ="titleInput"type="text" placeHolder ="title your post"class="form-control" required>
+              </div>
+            </div>
+          </div>
+          <div class="row descriptionRow">
+            <div class="col-xs-12">
+              <div class="input-group">
+                <span class="input-group-addon">Description</span>
+                <input id = "descInput"type="text" placeHolder ="ask the community"class="form-control" required>
+              </div>
+            </div>
+          </div>
+	       <div class="row buttonRow">
+	        <div class="col-xs-12">
+	          <div class="input-group">
+	            <span class="input-group-btn">
+	              <button id="postButton" class="btn btn-success" type="button">Post</button>
+	            </span>
+	          </div><!-- /input-group -->
+	        </div>
+	      </div> 
+			</form>
+	    <div class="row">
+        <div class="col-xs-12" id="tableHolder">
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="title">Title</th>
+                <th>Answer</th>
+              </tr>
+            </thead>
+            <tbody id="postingList">
+              <tr id="template">
+                <td class="postTitle col-xs-9"></td>
+                <td class="delete col-xs-3">
+                  <button class="btn btn-primary answerButton" type="button">Respond</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>  
+			</div>
+		</div>	
+
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	    <div class="modal-dialog" role="document">
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	          <h4 class="modal-title" id="myModalLabel"></h4>
+	        </div>
+	        <div class="modal-body">
+	          <div id = "descriptionHolder">
+	            <p id = "modalDesc"></p>
+	          </div>
+	          <h5>Enter a userName to answer</h5>
+	          <input type="text" placeHolder="userName">
+	          <button type="button" id = "respondModal" class="btn btn-primary">Respond</button>
+	          
+	          		<input type="text" id="answerInput" placeHolder ='answer here'>    
+	          <table class="table">
+            <thead>
+              <tr>
+                <th>Answer</th>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody id="answerList">
+              <tr id="template">
+                <td class="postTitle col-xs-9"></td>
+                <td class="delete col-xs-3">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+	        </div>
+	      </div>
+	    </div>
+  	</div>
+	
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.0.0/lodash.min.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

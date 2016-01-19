@@ -1,0 +1,15 @@
+#description {
+	height: 50px;
+}
+
+.descriptionRow {
+	margin-top: 20px;
+}
+
+.buttonRow {
+	margin-top: 20px;
+}
+
+#answerInput {
+	width: 100%;
+}
